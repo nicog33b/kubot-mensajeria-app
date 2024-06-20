@@ -1,21 +1,18 @@
 import React from "react";
 import AsideNav from "../components/asideMenu/asideNav";
 import Logo from "../components/asideMenu/logo";
-import ProfileInfo from "../components/asideMenu/profileInfo";
 
 export default function AsideLeft() {
   return (
-    <div>
-      <section id="asideLeftSection">
-        <section id="logo" className="px-6 py-3">
-          <div className="cursor-pointer hover:scale-110 m-2">
+    <div className="flex flex-col h-full">
+      <section id="asideLeftSection" className="h-full flex flex-col">
+        <section id="logo" className="px-3 py-1">
+          <div className="cursor-pointer hover:scale-105 transition-transform m-1">
             <Logo />
           </div>
         </section>
+
         <AsideNav />
-        <div className="mt-20 px-3">
-          <ProfileInfo name="Federico Gonzales" initials="FG" />
-        </div>
       </section>
     </div>
   );

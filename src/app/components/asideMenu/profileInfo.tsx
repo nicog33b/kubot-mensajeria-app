@@ -1,22 +1,22 @@
+import React from "react";
+
 interface ProfileInfoProps {
-    initials: string;
-    name: string;
-  }
-  
-  const ProfileInfo: React.FC<ProfileInfoProps> = ({ initials, name }) => {
-    return (
-      <div className="flex items-center">
-        <div className="flex items-center mr-4">
-          <div className="w-8 h-8 rounded-full bg-gray-500 text-white flex items-center justify-center">
-            <span>{initials}</span>
-          </div>
-          <div className="ml-2">
-            <span className="font-semibold">{name}</span>
-          </div>
-        </div>
+  name: string;
+  initials: string;
+}
+
+const ProfileInfo: React.FC<ProfileInfoProps> = ({ name, initials }) => {
+  return (
+    <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow-md">
+      <div className="flex items-center justify-center w-12 h-12 bg-gray-300 rounded-full text-xl font-bold">
+        {initials}
       </div>
-    );
-  };
-  
-  export default ProfileInfo;
-  
+      <div>
+        <div className="font-semibold text-lg">{name}</div>
+        <div className="text-gray-500 text-sm">View Profile</div>
+      </div>
+    </div>
+  );
+};
+
+export default ProfileInfo;

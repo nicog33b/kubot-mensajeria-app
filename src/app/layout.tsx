@@ -13,12 +13,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html>
-      <body className="h-screen flex">
-        <aside className="w-1/5 border-r rounded-r-lg shadow-lg h-full p-4 bg-opacity-75">
+    <html className="h-full">
+      <body className="h-full flex">
+        <aside className="hidden md:block md:w-1/5 border-r rounded-r-lg shadow-lg bg-opacity-75 h-full">
           <AsideLeft />
         </aside>
-        <main className="w-4/5 bg-gray-100 bg-opacity-50 h-full overflow-auto">
+        <main className="w-full md:w-4/5 bg-gray-100 bg-opacity-50 h-full overflow-auto">
           {children}
         </main>
       </body>
