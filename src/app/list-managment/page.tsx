@@ -1,9 +1,11 @@
 'use client'
 import React, { useState } from 'react';
 
+
 interface Contact {
   name: string;
   email: string;
+
 }
 
 interface MessageTemplate {
@@ -13,13 +15,16 @@ interface MessageTemplate {
 const contacts: Contact[] = [
   { name: 'Juan Pérez', email: 'juan@example.com' },
   { name: 'María Gómez', email: 'maria@example.com' },
-  // ... más contactos
+
+
 ];
 
 const messageTemplates: MessageTemplate[] = [
   { content: 'Hola [nombre], ¿cómo estás?' },
   { content: 'Te escribo para informarte sobre...' },
-  // ... más plantillas
+
+
+
 ];
 
 const CreateList: React.FC = () => {
@@ -38,7 +43,7 @@ const CreateList: React.FC = () => {
     setSelectedTemplate(messageTemplates[index]);
   };
 
-  // ... (lógica para guardar la lista)
+
 
   return (
     <div className="container mx-auto py-12">
@@ -83,11 +88,13 @@ const CreateList: React.FC = () => {
         </select>
       </div>
 
+
       {/* Botón para guardar la lista (lógica no incluida) */}
       <button className="bg-blue-300 hover:bg-blue-500 cursor-pointer text-white font-bold py-2 px-4 rounded text-center">
         Guardar Lista
       </button>
     </div>
+
   );
 };
 
